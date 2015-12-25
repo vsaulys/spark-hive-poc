@@ -14,4 +14,8 @@ df <- sql(sqlContext, "select min(adate) as first, max(adate) as last from test_
 
 head(df)
 
+df <- sql(sqlContext, "select year, min(adate) as first, max(adate) as last from test_p1 group by year")
+
+head(df)
+
 sparkR.stop()
