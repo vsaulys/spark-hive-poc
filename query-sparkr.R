@@ -4,7 +4,8 @@
 
 require(SparkR)
 
-sc <- sparkR.init(master = "local[*]")
+#sc <- sparkR.init(master = "local[*]")
+sc <- sparkR.init(master = "yarn-client")
 
 sqlContext <- sparkRHive.init(sc)
 
