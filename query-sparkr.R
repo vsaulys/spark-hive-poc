@@ -4,6 +4,9 @@
 
 require(SparkR)
 
+Sys.getenv("HADOOP_CONF_DIR")
+Sys.getenv("SPARK_HOME")
+
 #sc <- sparkR.init(master = "local[*]")
 sc <- sparkR.init(master = "yarn-client")
 
